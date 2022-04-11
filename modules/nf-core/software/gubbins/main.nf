@@ -14,7 +14,7 @@ process GUBBINS {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/gubbins:2.4.1--py38h197edbe_1"
     } else {
-        container "quay.io/biocontainers/gubbins:2.4.1--py38h197edbe_1"
+        container "${params.containerRegistry}/quay.io/biocontainers/gubbins:2.4.1--py38h197edbe_1"
     }
 
     input:

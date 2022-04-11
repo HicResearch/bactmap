@@ -14,7 +14,7 @@ process ALIGNPSEUDOGENOMES {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/biopython:1.78"
     } else {
-        container "quay.io/biocontainers/biopython:1.78"
+        container "${params.containerRegistry}/quay.io/biocontainers/biopython:1.78"
     }
 
     input:

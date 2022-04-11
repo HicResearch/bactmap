@@ -15,7 +15,7 @@ process RASUSA {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/rasusa:0.3.0--h779adbc_1"
     } else {
-        container "quay.io/biocontainers/rasusa:0.3.0--h779adbc_1"
+        container "${params.containerRegistry}/quay.io/biocontainers/rasusa:0.3.0--h779adbc_1"
     }
 
     input:

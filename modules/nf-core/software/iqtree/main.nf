@@ -14,7 +14,7 @@ process IQTREE {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/iqtree:2.1.2--h56fc30b_0"
     } else {
-        container "quay.io/biocontainers/iqtree:2.1.2--h56fc30b_0"
+        container "${params.containerRegistry}/quay.io/biocontainers/iqtree:2.1.2--h56fc30b_0"
     }
 
     input:

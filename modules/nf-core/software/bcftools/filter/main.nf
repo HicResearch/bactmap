@@ -15,7 +15,7 @@ process BCFTOOLS_FILTER {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/bcftools:1.11--h7c999a4_0"
     } else {
-        container "quay.io/biocontainers/bcftools:1.11--h7c999a4_0"
+        container "${params.containerRegistry}/quay.io/biocontainers/bcftools:1.11--h7c999a4_0"
     }
 
     input:

@@ -15,7 +15,7 @@ process SAMTOOLS_FLAGSTAT {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/samtools:1.10--h9402c20_2"
     } else {
-        container "quay.io/biocontainers/samtools:1.10--h9402c20_2"
+        container "${params.containerRegistry}/quay.io/biocontainers/samtools:1.10--h9402c20_2"
     }
 
     input:

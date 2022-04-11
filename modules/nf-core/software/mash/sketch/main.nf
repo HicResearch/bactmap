@@ -13,7 +13,7 @@ process MASH_SKETCH {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/mash:2.3--he348c14_1"
     } else {
-        container "quay.io/biocontainers/mash:2.3--he348c14_1"
+        container "${params.containerRegistry}/quay.io/biocontainers/mash:2.3--he348c14_1"
     }
 
     input:

@@ -15,7 +15,7 @@ process FASTTREE {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/fasttree:2.1.10--h516909a_4"
     } else {
-        container "quay.io/biocontainers/fasttree:2.1.10--h516909a_4"
+        container "${params.containerRegistry}/quay.io/biocontainers/fasttree:2.1.10--h516909a_4"
     }
 
     input:

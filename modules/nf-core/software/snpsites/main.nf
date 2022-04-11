@@ -14,7 +14,7 @@ process SNPSITES {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/snp-sites:2.5.1--hed695b0_0"
     } else {
-        container "quay.io/biocontainers/snp-sites:2.5.1--hed695b0_0"
+        container "${params.containerRegistry}/quay.io/biocontainers/snp-sites:2.5.1--hed695b0_0"
     }
 
     input:
