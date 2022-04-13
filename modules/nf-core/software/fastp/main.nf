@@ -15,7 +15,7 @@ process FASTP {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container 'https://depot.galaxyproject.org/singularity/fastp:0.20.1--h8b12597_0'
     } else {
-        container "${params.containerRegistry}/quay.io/biocontainers/fastp:0.20.1--h8b12597_0'
+        container "${params.containerRegistry}/quay.io/biocontainers/fastp:0.20.1--h8b12597_0"
     }
 
     input:
