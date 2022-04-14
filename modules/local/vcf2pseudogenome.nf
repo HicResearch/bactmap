@@ -15,7 +15,8 @@ process VCF2PSEUDOGENOME {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/mulled-v2-3a59640f3fe1ed11819984087d31d68600200c3f:185a25ca79923df85b58f42deb48f5ac4481e91f-0"
     } else {
-        container "${params.containerRegistry}/quay.io/biocontainers/mulled-v2-3a59640f3fe1ed11819984087d31d68600200c3f:185a25ca79923df85b58f42deb48f5ac4481e91f-0"
+        // quay.io/biocontainers/mulled-v2-3a59640f3fe1ed11819984087d31d68600200c3f:185a25ca79923df85b58f42deb48f5ac4481e91f-0
+        container "${params.containerRegistry}/quay.io/biocontainers/mulled-v2-3a59640:185a25c-0"
     }
 
     input:
